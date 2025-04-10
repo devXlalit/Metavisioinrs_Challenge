@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "HATO Help Request API",
+    "_postman_id": "a1f5cf92-7d5d-4720-91d4-fc72bba624fa",
+    "description": "Collection for testing the HATO Help Request API built using Node.js and Express.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Help Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Need roadside assistance\",\n  \"description\": \"Car broken down near Highway 9\",\n  \"location\": \"Highway 9, Exit 14\",\n  \"contact\": \"999-123-4567\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/help-request",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "help-request"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Help Requests",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/help-request",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "help-request"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Help Request by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/help-request/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "help-request", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "PASTE_VALID_ID_HERE"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
